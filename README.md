@@ -48,6 +48,8 @@ par Lucas, Luis, Mickael
 
         <!-- Permettre à l'utilisateur de changer la couleur et la taille de ses messages --> 
 
+            <label class="textecouleurs" for="couleur">Changer la couleur du texte :</label>
+            <br>
             <select id="sectioncouleur">
                 <option value="">--Choissisez une couleurs--</option>
                 <option value="red">Rouge</option>
@@ -55,6 +57,9 @@ par Lucas, Luis, Mickael
                 <option value="green">Vert</option>
                 <option value="yellow">Jaune</option>
             </select>
+            <p>
+                <input type="submit" value="Valider" id="couleur" onclick="couleurtexte()">
+            </p>
             <p>
                 <input type="submit" value="Changer la taille du texte" id="couleur" onclick="tailletexte()">
             </p>
@@ -105,7 +110,7 @@ par Lucas, Luis, Mickael
                 function couleurtexte() {
                     var couleur = document.getElementById("sectioncouleur").value;
                     console.log(couleur);
-                    document.getElementById("content").couleur.style.color = "rouge" || "bleu" || "vert";
+                    document.getElementById("content").style.color = couleur; 
                 }
 
                 function tailletexte() {
